@@ -3,13 +3,28 @@
 
 //--------------NEW KATA------------------
 
-function gooseFilter (birds) {
-  const geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-  return birds.filter((element) => !geese.includes(element))
-};
+function isSameLanguage(list) {
+  const currentLanguage = list[0].language   
+  return list.every((person) => currentLanguage === person.language)
+}
 
-console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]
-))
+const list = [
+  { firstName: 'Daniel', lastName: 'J.', country: 'Aruba', continent: 'Americas', age: 42, language: 'JavaScript' },
+  { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 22, language: 'JavaScript' },
+  { firstName: 'Hanna', lastName: 'L.', country: 'Hungary', continent: 'Europe', age: 65, language: 'JavaScript' },
+];
+
+console.log(isSameLanguage(list))
+
+//--------------NEW KATA------------------
+
+// function gooseFilter (birds) {
+//   const geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+//   return birds.filter((element) => !geese.includes(element))
+// };
+
+// console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]
+// ))
 
 //--------------NEW KATA------------------
 
