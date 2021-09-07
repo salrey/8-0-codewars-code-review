@@ -3,16 +3,24 @@
 
 //--------------NEW KATA------------------
 
-function reverse(str){
-  return str.split(" ").map((word, index) => {
-    if (index % 2) {
-      word = word.split("").reverse().join("") 
-    }
-    return word
-  }).join(" ").trim()
+function firstNonConsecutive (arr) {
+  return arr.find((element, i) => i !== element-1)
 }
 
-console.log(reverse("Reverse this string, please!"))
+console.log(firstNonConsecutive([1,2,3,4,6,7,8]))
+
+//--------------NEW KATA------------------
+
+// function reverse(str){
+//   return str.split(" ").map((word, index) => {
+//     if (index % 2) {
+//       word = word.split("").reverse().join("") 
+//     }
+//     return word
+//   }).join(" ").trim()
+// }
+
+// console.log(reverse("Reverse this string, please!"))
 
 //--------------NEW KATA------------------
 
