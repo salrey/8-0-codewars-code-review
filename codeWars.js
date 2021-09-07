@@ -3,11 +3,19 @@
 
 //--------------NEW KATA------------------
 
-function numObj(s){
-  return s.map((element) => element = {[element]: String.fromCodePoint(element)})
+function findMagic (arr) {
+  return Number(arr.filter((element,index) => element === index)) || -1
 }
 
-console.log(numObj([118,117,120]))
+console.log(findMagic([-20,-10,2,10,20]))
+
+//--------------NEW KATA------------------
+
+// function numObj(s){
+//   return s.map((element) => element = {[element]: String.fromCodePoint(element)})
+// }
+
+// console.log(numObj([118,117,120]))
 
 //--------------NEW KATA------------------
 
