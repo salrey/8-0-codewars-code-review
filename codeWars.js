@@ -3,18 +3,31 @@
 
 //--------------NEW KATA------------------
 
-function isSameLanguage(list) {
-  const currentLanguage = list[0].language   
-  return list.every((person) => currentLanguage === person.language)
+function reverse(str){
+  return str.split(" ").map((word, index) => {
+    if (index % 2) {
+      word = word.split("").reverse().join("") 
+    }
+    return word
+  }).join(" ").trim()
 }
 
-const list = [
-  { firstName: 'Daniel', lastName: 'J.', country: 'Aruba', continent: 'Americas', age: 42, language: 'JavaScript' },
-  { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 22, language: 'JavaScript' },
-  { firstName: 'Hanna', lastName: 'L.', country: 'Hungary', continent: 'Europe', age: 65, language: 'JavaScript' },
-];
+console.log(reverse("Reverse this string, please!"))
 
-console.log(isSameLanguage(list))
+//--------------NEW KATA------------------
+
+// function isSameLanguage(list) {
+//   const currentLanguage = list[0].language   
+//   return list.every((person) => currentLanguage === person.language)
+// }
+
+// const list = [
+//   { firstName: 'Daniel', lastName: 'J.', country: 'Aruba', continent: 'Americas', age: 42, language: 'JavaScript' },
+//   { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 22, language: 'JavaScript' },
+//   { firstName: 'Hanna', lastName: 'L.', country: 'Hungary', continent: 'Europe', age: 65, language: 'JavaScript' },
+// ];
+
+// console.log(isSameLanguage(list))
 
 //--------------NEW KATA------------------
 
