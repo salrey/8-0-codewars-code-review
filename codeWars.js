@@ -4,10 +4,19 @@
 //--------------NEW KATA------------------
 
 function firstNonConsecutive (arr) {
-  return arr.find((element, i) => i !== element-1)
+  let result = arr.find((element, i) => { 
+    if (i > 0) {
+      return arr[i-1] !== element - 1 
+    }
+  })
+  if (result === undefined) {
+    return null
+  }
+  return result
 }
 
 console.log(firstNonConsecutive([1,2,3,4,6,7,8]))
+console.log(firstNonConsecutive([-6,-5,-4,-3,-2,-1,1,2,3]))
 
 //--------------NEW KATA------------------
 
