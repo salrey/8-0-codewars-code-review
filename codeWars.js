@@ -3,20 +3,55 @@
 
 //--------------NEW KATA------------------
 
-function firstNonConsecutive (arr) {
-  let result = arr.find((element, i) => { 
-    if (i > 0) {
-      return arr[i-1] !== element - 1 
-    }
-  })
-  if (result === undefined) {
-    return null
-  }
-  return result
+function none(arr, fun){
+ 
 }
 
-console.log(firstNonConsecutive([1,2,3,4,6,7,8]))
-console.log(firstNonConsecutive([-6,-5,-4,-3,-2,-1,1,2,3]))
+//--------------NEW KATA------------------
+
+function sortArray(array) {
+  // Create an array of odd numbers and sort them
+  let oddNum = []
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2) {
+      oddNum.push(array[i])
+    }
+  }
+  oddNum.sort((a,b) => a - b)
+
+  // Loop through array and if it's an odd number, replace as you go through the sorted odd num array
+  let i = 0
+  let j = 0
+  while (i < array.length) {
+    if (array[i] % 2) {
+      array[i] = oddNum[j]
+      j++
+    }
+    i++
+  }
+  return array
+}
+
+
+console.log(sortArray([7, 1]))
+console.log(sortArray([5, 8, 6, 3, 4]))
+
+//--------------NEW KATA------------------
+
+// function firstNonConsecutive (arr) {
+//   let result = arr.find((element, i) => { 
+//     if (i > 0) {
+//       return arr[i-1] !== element - 1 
+//     }
+//   })
+//   if (result === undefined) {
+//     return null
+//   }
+//   return result
+// }
+
+// console.log(firstNonConsecutive([1,2,3,4,6,7,8]))
+// console.log(firstNonConsecutive([-6,-5,-4,-3,-2,-1,1,2,3]))
 
 //--------------NEW KATA------------------
 
@@ -99,30 +134,6 @@ console.log(firstNonConsecutive([-6,-5,-4,-3,-2,-1,1,2,3]))
 // }
 
 // console.log(go('right'))
-
-//--------------NEW KATA------------------
-
-// const array = [5, 8, 6, 3, 4] 
-// //=>  [3, 8, 6, 5, 4]
-
-// function sortArray(array) {
-//   let current = array[0]
-//   for (let i = 0; i < array.length; i++) {
-//     if (array[i] % 2 && array[i+1] % 1) {
-
-//     }
-//   }  
-//   return array.sort((a,b) => {
-//     if (a % 2 && b % 2) {
-//       return a - b
-//     }
-//     if (a % 2 && !(b % 2)) {
-
-//     }
-//   })
-// }
-
-// console.log(sortArray(array))
 
 //--------------NEW KATA------------------
 
