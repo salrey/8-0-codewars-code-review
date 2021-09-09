@@ -4,37 +4,37 @@
 //--------------NEW KATA------------------
 
 function none(arr, fun){
- 
+  return arr.every((element) => !fun(element));
 }
 
 //--------------NEW KATA------------------
 
-function sortArray(array) {
-  // Create an array of odd numbers and sort them
-  let oddNum = []
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] % 2) {
-      oddNum.push(array[i])
-    }
-  }
-  oddNum.sort((a,b) => a - b)
+// function sortArray(array) {
+//   // Create an array of odd numbers and sort them
+//   let oddNum = []
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] % 2) {
+//       oddNum.push(array[i])
+//     }
+//   }
+//   oddNum.sort((a,b) => a - b)
 
-  // Loop through array and if it's an odd number, replace as you go through the sorted odd num array
-  let i = 0
-  let j = 0
-  while (i < array.length) {
-    if (array[i] % 2) {
-      array[i] = oddNum[j]
-      j++
-    }
-    i++
-  }
-  return array
-}
+//   // Loop through array and if it's an odd number, replace as you go through the sorted odd num array
+//   let i = 0
+//   let j = 0
+//   while (i < array.length) {
+//     if (array[i] % 2) {
+//       array[i] = oddNum[j]
+//       j++
+//     }
+//     i++
+//   }
+//   return array
+// }
 
 
-console.log(sortArray([7, 1]))
-console.log(sortArray([5, 8, 6, 3, 4]))
+// console.log(sortArray([7, 1]))
+// console.log(sortArray([5, 8, 6, 3, 4]))
 
 //--------------NEW KATA------------------
 
